@@ -1,55 +1,70 @@
-theme = "black-and-light"
+theme = "hello-friend-ng"
 relativeURLs = true
 baseURL = "/"
-title = "Hugo Themes"
-author = "Steve Francia"
+title = "denis.codes"
+author = "Denis Maximov"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
-paginate = 3
-languageCode = "en"
+paginate = 10
+languageCode = "en-us"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 
-[menu]
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
 
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
+  # Subtitle for home
+  homeSubtitle = "software engineer / consultant"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you linke
+  enableSharingButtons = true
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
 
-[privacy]
+    # Social icons
+  [[params.social]]
+    name = "email"
+    url  = "mailto:nobody@example.com"
 
-  [privacy.vimeo]
-    disabled = false
-    simple = true
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/denismaxim0v"
 
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/denis-maximov-a5b79a140/"
 
-  [privacy.instagram]
-    disabled = false
-    simple = true
+[languages]
+  [languages.en]
+    title = "Denis Maximov"
+    subtitle = "software engineer/consultant"
+    keywords = ""
+    copyright = '<a href="https://github.com/denismaxim0v" target="_blank" rel="noopener">github</a>'
+    readOtherPosts = "Read other posts"
 
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
+    [languages.en.params.logo]
+      logoText = "denis.codes"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
-[services]
-
-  [services.instagram]
-    disableInlineCSS = true
-
-  [services.twitter]
-    disableInlineCSS = true
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
