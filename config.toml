@@ -29,6 +29,9 @@ enableInlineShortcodes = true
   keywords = "homepage, blog"
   images = [""]
 
+[[params.logo]]
+logoCursorColor = "#fff"
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
